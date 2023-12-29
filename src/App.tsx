@@ -4,10 +4,10 @@ import styled, {keyframes} from 'styled-components';
 const Navigation = () => {
     return (
         <nav>
-            <Menu>
-                <MenuItem><a href={'#'}>Item 1</a></MenuItem>
-                <MenuItem><a href={'#'}>Item 2</a></MenuItem>
-                <MenuItem><a href={'#'}>Item 3</a></MenuItem>
+            <Menu role={'menu'} aria-label={'меню в заголовке'}>
+                <MenuItem role={'menuitem'}><a href={'#'}>Item 1</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'}>Item 2</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'}>Item 3</a></MenuItem>
             </Menu>
         </nav>
     );
@@ -19,23 +19,24 @@ function App() {
             <Header>
                 <Navigation/>
                 <LoginBtn>LOGIN</LoginBtn>
+                <LoginBtn aria-label={'закрыть'}>X</LoginBtn>
             </Header>
             <Block>
                 <Title>Accessibility</Title>
                 <Form>
                     <div>
                         <Label htmlFor="1">Label for field 1</Label>
-                        <Field id="1" placeholder="Field 1"/>
+                        <Field type={'text'} id="1" placeholder="Login" aria-placeholder={'Поле для логина'}/>
                     </div>
 
                     <div>
                         <Label htmlFor="2">Label for field 2</Label>
-                        <Field id="2" placeholder="Field 2"/>
+                        <Field type={'email'} id="2" placeholder="Email" aria-placeholder={'Поле для почты'}/>
                     </div>
 
                     <div>
                         <Label htmlFor="3">Label for field 3</Label>
-                        <Field id="3" placeholder="Field 3"/>
+                        <Field type={'password'} id="3" placeholder="Password" aria-placeholder={'Поле 3 для пароля'}/>
                     </div>
                 </Form>
             </Block>
@@ -78,7 +79,6 @@ const MenuItem = styled.li`
     color: white;
     font-weight: bold;
     text-decoration: none;
-  
   }
 `;
 
@@ -112,7 +112,9 @@ const Label = styled.label`
   line-height: 2rem;
 `;
 
-const Field = styled.input`
+const Field = styled.input.attrs(({type}) => ({
+    type
+}))`
   padding: 5px 15px;
   width: 100%;
   font-size: 1rem;
@@ -121,3 +123,12 @@ const Field = styled.input`
 
 
 
+// const Field2 = styled.input.attrs(({type, placeholder}) => ({
+//     type,
+//     placeholder,
+// }))`
+//   padding: 5px 15px;
+//   margin: 10px 0;
+//   width: 100%;
+//   font-size: 1rem;
+// `;
