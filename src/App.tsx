@@ -25,17 +25,17 @@ function App() {
                 <Title>Accessibility</Title>
                 <Form>
                     <div>
-                        <Label htmlFor="1">Label for field 1</Label>
+                        <Label htmlFor="1" aria-labelledby={'1'}>Label for field 1</Label>
                         <Field type={'text'} id="1" placeholder="Login" aria-placeholder={'Поле для логина'}/>
                     </div>
 
                     <div>
-                        <Label htmlFor="2">Label for field 2</Label>
+                        <Label htmlFor="2" aria-labelledby={'2'}>Label for field 2</Label>
                         <Field type={'email'} id="2" placeholder="Email" aria-placeholder={'Поле для почты'}/>
                     </div>
 
                     <div>
-                        <Label htmlFor="3">Label for field 3</Label>
+                        <Label htmlFor="3" aria-labelledby={'3'}>Label for field 3</Label>
                         <Field type={'password'} id="3" placeholder="Password" aria-placeholder={'Поле 3 для пароля'}/>
                     </div>
                 </Form>
