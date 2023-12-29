@@ -3,11 +3,13 @@ import styled, {keyframes} from 'styled-components';
 
 const Navigation = () => {
     return (
-        <Menu>
-            <MenuItem>Item 1</MenuItem>
-            <MenuItem>Item 2</MenuItem>
-            <MenuItem>Item 3</MenuItem>
-        </Menu>
+        <nav>
+            <Menu>
+                <MenuItem><a href={'#'}>Item 1</a></MenuItem>
+                <MenuItem><a href={'#'}>Item 2</a></MenuItem>
+                <MenuItem><a href={'#'}>Item 3</a></MenuItem>
+            </Menu>
+        </nav>
     );
 };
 
@@ -47,17 +49,17 @@ export default App;
 const Bouncing = keyframes`
   50% {
     transform: translateY(20%);
-  }  
+  }
 `
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
   margin: 60px 0;
   animation: ${Bouncing} 1s linear infinite alternate;
 `;
 
-const Header = styled.div`
+const Header = styled.header`
   height: 80px;
   background-color: #e91e63;
   display: flex;
@@ -65,17 +67,17 @@ const Header = styled.div`
   align-items: center;
 `;
 
-const Menu = styled.div`
+const Menu = styled.ul`
   display: flex;
   gap: 15px;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.li`
   color: white;
   font-weight: bold;
 `;
 
-const LoginBtn = styled.div`
+const LoginBtn = styled.button`
   color: white;
   font-weight: bold;
   padding: 10px 20px;
@@ -83,14 +85,14 @@ const LoginBtn = styled.div`
   border-radius: 5px;
 `;
 
-const Block = styled.div`
+const Block = styled.section`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   width: 100%;
   max-width: 500px;
   display: flex;
