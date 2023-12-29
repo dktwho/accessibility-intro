@@ -1,7 +1,6 @@
 import './App.css';
 import styled, {keyframes} from 'styled-components';
 
-
 const Navigation = () => {
     return (
         <Menu>
