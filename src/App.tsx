@@ -70,11 +70,16 @@ const Header = styled.header`
 const Menu = styled.ul`
   display: flex;
   gap: 15px;
+  list-style: none;
 `;
 
 const MenuItem = styled.li`
-  color: white;
-  font-weight: bold;
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  
+  }
 `;
 
 const LoginBtn = styled.button`
@@ -83,6 +88,8 @@ const LoginBtn = styled.button`
   padding: 10px 20px;
   border: 2px solid;
   border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
 `;
 
 const Block = styled.section`
