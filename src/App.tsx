@@ -19,7 +19,7 @@ function App() {
             <Header>
                 <Navigation/>
                 <LoginBtn>LOGIN</LoginBtn>
-                <LoginBtn aria-label={'закрыть'}>X</LoginBtn>
+                <LoginBtn aria-label={'закрыть'} accessKey={'x'}>X</LoginBtn>
             </Header>
             <Block>
                 <Title>Accessibility</Title>
