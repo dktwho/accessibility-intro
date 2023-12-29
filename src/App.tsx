@@ -5,9 +5,9 @@ const Navigation = () => {
     return (
         <nav>
             <Menu role={'menu'} aria-label={'меню в заголовке'}>
-                <MenuItem role={'menuitem'}><a href={'#'}>Item 1</a></MenuItem>
-                <MenuItem role={'menuitem'}><a href={'#'}>Item 2</a></MenuItem>
-                <MenuItem role={'menuitem'}><a href={'#'}>Item 3</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'} tabIndex={1}>Item 1</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'} tabIndex={2}>Item 2</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'} tabIndex={3}>Item 3</a></MenuItem>
             </Menu>
         </nav>
     );
@@ -119,8 +119,6 @@ const Field = styled.input.attrs(({type}) => ({
   width: 100%;
   font-size: 1rem;
 `;
-
-
 
 
 // const Field2 = styled.input.attrs(({type, placeholder}) => ({
