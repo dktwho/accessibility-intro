@@ -67,7 +67,7 @@ const Title = styled.h1`
 
 const Header = styled.header`
   height: 80px;
-  background-color: #e91e63;
+  background-color: #163dd0;
   display: flex;
   justify-content: space-around;
   align-items: center;
